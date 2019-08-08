@@ -1,0 +1,21 @@
+Band Pass
+
+V1 1 0 dc 0 ac 1
+R1 0 2 1k
+C1 1 2 1u
+R3 2 3 200
+C4 3 0 2.5u
+
+.ac inc 20 0 1000000
+
+
+.control
+run
+write
+display
+print all
+plot v(1)
+plot -v(3)
+.endc
+
+.end

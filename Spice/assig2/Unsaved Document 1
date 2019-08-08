@@ -1,0 +1,26 @@
+Band Pass
+
+V1 0 1 0 SIN(0 1 60 0 0)
+R1 0 2 1k
+C1 1 2 1u
+R3 2 3 200
+C4 3 0 2.5u
+
+
+
+
+.op
+
+
+.tran 1m 100m uic
+
+.control
+run
+write
+display
+print all
+plot v(1)
+plot v(3)
+.endc
+
+.end
